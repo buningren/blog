@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+    <style>
+      .box{border: 1px solid #000; width: 300px;}
+      .element{border: 1px solid red;}
+      
+      .demo-1{text-align: center;}
+      .demo-1 td{height: 50px; vertical-align: middle;}
+      
+      .demo-2{display: table-cell; vertical-align: middle; height: 50px; text-align: center;}
+      
+      .demo-3{display: flex; height: 50px; justify-content: center; align-items: center;}
+      
+      .demo-4{height: 50px; line-height: 50px; text-align: center;}
+      .demo-4:after{content: ''; display: inline-block; width: 0; height: 100%; vertical-align: middle;}
+      
+      .demo-5{height: 50px; text-align: center; position: relative;}
+      .demo-5 .element{width: 200px; height: 30px; line-height: 30px; position: absolute; top: 50%; left: 50%; margin-top: -15px; margin-left: -100px;}
+      
+      .demo-6{height: 50px; text-align: center; position: relative;}
+      .demo-6 .element{width: 200px; height: 30px; line-height: 30px; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);}
+      
+      .demo-7{height: 50px; text-align: center; line-height: 50px;}
+      .demo-7 .element{display: inline-block; height: 30px; line-height: 30px; width: 200px; vertical-align: middle;}
+    </style>
+	</head>
+	<body>
+    <h4>1. 利用table的td实现水平垂直居中</h4>
+    <table class="box demo-1">
+      <tr>
+        <td>
+          <div class="element">水平垂直居中</div>
+        </td>
+      </tr>
+    </table>
+    
+    <h4>2. 利用display: table-cell实现水平垂直居中</h4>
+    <div class="box demo-2">
+      <div class="element">水平垂直居中</div>
+    </div>
+    
+    <h4>3. 利用display: flex实现水平垂直居中</h4>
+    <div class="box demo-3">
+      <div class="element">水平垂直居中</div>
+    </div>
+    
+    <h4>4. 利用display: inline-block和vertical-align: middle实现水平垂直居中</h4>
+    <div class="box demo-4">
+      <div class="element">水平垂直居中</div>
+    </div>
+    
+    <h4>5. 利用绝对定位和负外边距实现水平垂直居中</h4>
+    <div class="box demo-5">
+      <div class="element">水平垂直居中</div>
+    </div>
+    
+    <h4>6. 利用绝对定位和CSS3平移实现水平垂直居中</h4>
+    <div class="box demo-6">
+      <div class="element">水平垂直居中</div>
+    </div>
+    
+    <h4>7. 利用display: inline-block和vertical-align: middle实现水平垂直居中</h4>
+    <div class="box demo-7">
+      <div class="element">水平垂直居中</div>
+    </div>
+    
+    <h4>8. 利用??实现水平垂直居中</h4>
+    <div class="box demo-8">
+      <div class="element">水平垂直居中</div>
+    </div>
+	</body>
+</html>
