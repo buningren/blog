@@ -1,0 +1,9 @@
+{
+  "name": "Blog",
+  "description": "不宁人的网络日志",
+  "version": "0.0.1",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
