@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ECMAScript 6 简介 | 不宁人的网络日志</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="不宁人的网络日志">
+    <link rel="preload" href="/assets/css/0.styles.1f0f1022.css" as="style"><link rel="preload" href="/assets/js/app.e1ad2a9b.js" as="script"><link rel="preload" href="/assets/js/2.7f160063.js" as="script"><link rel="preload" href="/assets/js/26.24611ffc.js" as="script"><link rel="prefetch" href="/assets/js/10.908adae6.js"><link rel="prefetch" href="/assets/js/11.a8876157.js"><link rel="prefetch" href="/assets/js/12.195ec93d.js"><link rel="prefetch" href="/assets/js/13.58ae1cf8.js"><link rel="prefetch" href="/assets/js/14.d6257dea.js"><link rel="prefetch" href="/assets/js/15.40e493cd.js"><link rel="prefetch" href="/assets/js/16.55723c42.js"><link rel="prefetch" href="/assets/js/17.88c429a6.js"><link rel="prefetch" href="/assets/js/18.933d49de.js"><link rel="prefetch" href="/assets/js/19.e10818a8.js"><link rel="prefetch" href="/assets/js/20.c05d5a2a.js"><link rel="prefetch" href="/assets/js/21.a7329129.js"><link rel="prefetch" href="/assets/js/22.4dbd5727.js"><link rel="prefetch" href="/assets/js/23.376d7873.js"><link rel="prefetch" href="/assets/js/24.21b05723.js"><link rel="prefetch" href="/assets/js/25.11a6c189.js"><link rel="prefetch" href="/assets/js/27.be3c3310.js"><link rel="prefetch" href="/assets/js/28.45ac3630.js"><link rel="prefetch" href="/assets/js/29.5b231b6d.js"><link rel="prefetch" href="/assets/js/3.d7a8cabd.js"><link rel="prefetch" href="/assets/js/30.b3cf370e.js"><link rel="prefetch" href="/assets/js/31.eb4da470.js"><link rel="prefetch" href="/assets/js/32.8b490d4d.js"><link rel="prefetch" href="/assets/js/33.e31024d7.js"><link rel="prefetch" href="/assets/js/34.90fe51fc.js"><link rel="prefetch" href="/assets/js/35.ac753d01.js"><link rel="prefetch" href="/assets/js/36.b9162b68.js"><link rel="prefetch" href="/assets/js/37.f6ba1b2d.js"><link rel="prefetch" href="/assets/js/38.d58b5c54.js"><link rel="prefetch" href="/assets/js/39.9d51998c.js"><link rel="prefetch" href="/assets/js/4.d4715cca.js"><link rel="prefetch" href="/assets/js/40.d491e4da.js"><link rel="prefetch" href="/assets/js/41.18dadfda.js"><link rel="prefetch" href="/assets/js/5.eba11a83.js"><link rel="prefetch" href="/assets/js/6.22fbe844.js"><link rel="prefetch" href="/assets/js/7.bd126984.js"><link rel="prefetch" href="/assets/js/8.42d906b4.js"><link rel="prefetch" href="/assets/js/9.f4473561.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.1f0f1022.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">不宁人的网络日志</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/note/frontend/" class="nav-link router-link-active">
+  前端
+</a></div><div class="nav-item"><a href="/note/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/note/secure/" class="nav-link">
+  安全
+</a></div><div class="nav-item"><a href="/note/algorithm/" class="nav-link">
+  算法与数据结构
+</a></div><div class="nav-item"><a href="/note/server/" class="nav-link">
+  服务端
+</a></div><div class="nav-item"><a href="/note/languages/" class="nav-link">
+  外语
+</a></div><div class="nav-item"><a href="/note/all/" class="nav-link">
+  综合
+</a></div><div class="nav-item"><a href="/navigator/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="https://github.com/buningren" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/note/frontend/" class="nav-link router-link-active">
+  前端
+</a></div><div class="nav-item"><a href="/note/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/note/secure/" class="nav-link">
+  安全
+</a></div><div class="nav-item"><a href="/note/algorithm/" class="nav-link">
+  算法与数据结构
+</a></div><div class="nav-item"><a href="/note/server/" class="nav-link">
+  服务端
+</a></div><div class="nav-item"><a href="/note/languages/" class="nav-link">
+  外语
+</a></div><div class="nav-item"><a href="/note/all/" class="nav-link">
+  综合
+</a></div><div class="nav-item"><a href="/navigator/" class="nav-link">
+  导航
+</a></div><div class="nav-item"><a href="https://github.com/buningren" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ecmascript-6-简介"><a href="#ecmascript-6-简介" class="header-anchor">#</a> ECMAScript 6 简介</h1> <div class="language-markdown extra-class"><pre class="language-markdown"><code>1、ECMAScript 6 与 Javascript 的关系
+2、ES6 和 ES5 的关系
+3、语法提案的批准流程
+4、ECMAScript 的历史
+5、部署进度
+6、Babel转码器
+7、Traceur转码器
+</code></pre></div><p>ECMAScript 6.0(以下简称 ES6) 是Javascript 语言的下一代标准，已经在2015年6月正式发布了。
+它的目标，是使得Javascript语言可以用来编写复杂的大型应用程序，成为企业级开发语言。</p> <hr> <h2 id="_1-ecmascript-和-javascript-的关系"><a href="#_1-ecmascript-和-javascript-的关系" class="header-anchor">#</a> 1. ECMAScript 和 Javascript 的关系</h2> <p>一个常见的问题是，ECMAScript 和 Javascript 到底是上面关系？</p> <p>ECMA(European Computer Manufacturers Association)要讲清楚这个问题，需要回顾历史。1996年11月，Javascript的创造者Netscape公司，</p> <p>1997 1.0
+1998 2.0
+1999 3.0
+2011 5.1
+2015 6.0 ECMA2015
+2016 7.0 ECMA2016
+2017 8.0 ECMA2017
+2018 9.0 ECMA2018</p> <p>typeof null === 'object'</p> <p>定目标</p> <p>经验少，能力较弱的人
+难以评估目标，目标周期短</p> <p>经验丰富，能力较强的人
+较易评估目标，目标周期较长</p> <p>PM
+product manager
+project manager</p> <p>philosophy</p> <p>let
+块级作用域：
+变量提升：不存在变量提升
+暂时性死区：声明之前不允许使用
+重复声明： 同一作用域不允许重复声明</p> <p>const 声明必须立即初始化</p> <p>ES5 var function
+ES6 var function let const import class</p> <p>全局变量和顶层对象属性
+browser window/self
+nodejs global
+web worker self</p> <p>destructuring</p> <p>flex
+.container{
+display: flex;
+flex-direction: row|row-reverse|column|column-reverse;
+flex-wrap: nowrap|wrap|wrap-reverse;
+flex-flow: a b;
+justify-content: flex-start|flex-end|center|space-between|space-around;
+align-items: flex-start|flex-end|center|stretch|baseline;
+align-content: flex-start|flex-end|center|space-between|space-around|stretch;
+}
+.item{
+order: <integer>;
+align-self: flex-start|flex-end|center|stretch|baseline;
+flex: a b c;
+flex-basis: <length> | default auto;
+flex-shrink: <number> | default 1;
+flex-glow: <number> | default 0;
+}</number></number></length></integer></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e1ad2a9b.js" defer></script><script src="/assets/js/2.7f160063.js" defer></script><script src="/assets/js/26.24611ffc.js" defer></script>
+  </body>
+</html>
